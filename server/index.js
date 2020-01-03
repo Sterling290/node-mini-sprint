@@ -12,7 +12,7 @@ const port = 3000;
 
 // TODO: Fill with strings of your favorite quotes :)
 const quotes = [
-  'one',
+  `If you ain't first, you're last -Ricky Bobby`,
   'two',
   'three',
   'four',
@@ -37,13 +37,18 @@ const handleRequest = function(req, res) {
   }
 
   // TODO: GET ONE
-  if ((req.url == '/quote/' || req.url == '/quote') && req.method == "FILL ME IN") {
+  if ((req.url == '/quote/' || req.url == '/quote') && req.method == "GET") {
+    console.log("getting")
     //YOUR CODE HERE
+    //find a way to respond with data from quotes[randominteger(0, quotes.length)]
+    res.writeHead(200, headers)
+    res.end(quotes[getRandomInt(0, quotes.length)]);
 
   }
   // TODO: POST/CREATE
-  else if ((req.url == 'FILL ME IN' || req.url == 'FILL ME IN') && req.method == "FILL ME IN") {
+  else if ((req.url == 'FILL ME IN' || req.url == 'FILL ME IN') && req.method == "POST") {
     //YOUR CODE HERE
+    res.end();
   }
 
 //CATCH ALL ROUTE

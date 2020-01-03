@@ -12,6 +12,10 @@ $(document).ready(function() {
 
   function getQuote(){
 
+    $.get('http://localhost:3000/quote', function(data){
+      $("#quote").html(data);
+    })
+
     //YOUR CODE HERE, Add a GET request
 
   }
