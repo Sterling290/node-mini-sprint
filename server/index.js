@@ -16,7 +16,8 @@ const quotes = [
   `This quote won't help you -Me`,
   `Another quote -Brian`,
   `Take a break, seriously -Me`,
-  `Another Quoteeee`
+  `Another Quoteeee`,
+  `Congrats, you're one day closer to death -The Grim Reaper`
 ];
 
 //Utility Function to return a random integer
