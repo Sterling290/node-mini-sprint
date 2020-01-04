@@ -13,10 +13,10 @@ const port = 3000;
 // TODO: Fill with strings of your favorite quotes :)
 const quotes = [
   `If you ain't first, you're last -Ricky Bobby`,
-  'two',
-  'three',
-  'four',
-  'five'
+  `This quote won't help you -Me`,
+  `Another quote -Brian`,
+  `Take a break, seriously -Me`,
+  `Another Quoteeee`
 ];
 
 //Utility Function to return a random integer
