@@ -20,7 +20,7 @@ $(document).ready(function() {
 
   function addQuote(userInput){
     
-    $.post('http://localhost:3000/userquote', userInput);
+    $.post('http://localhost:3000/userquote', userInput, getQuote);
     //YOUR CODE HERE, Add a POST request
 
   }

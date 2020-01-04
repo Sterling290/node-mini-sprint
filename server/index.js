@@ -48,23 +48,22 @@ const handleRequest = function(req, res) {
   // TODO: POST/CREATE
   else if ((req.url == '/userquote/' || req.url == '/userquote') && req.method == "POST") {
     //YOUR CODE HERE
-    res.writeHead(201, headers);
     let body = [];
+
+    res.writeHead(201, headers);
     req.on('data', (chunk) => {
       body.push(chunk);
     }).on('end', () => {
       body = Buffer.concat(body).toString();
-      console.log(body);
       quotes.push(body);
-      console.log(quotes)
     });
+    res.end();
   }
 
 //CATCH ALL ROUTE
   else {
     res.writeHead(404,headers);
     res.end('Page not found');
-
   }
 }
 
