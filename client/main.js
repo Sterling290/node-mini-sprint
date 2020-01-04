@@ -15,13 +15,12 @@ $(document).ready(function() {
     $.get('http://localhost:3000/quote', function(data){
       $("#quote").html(data);
     })
-
     //YOUR CODE HERE, Add a GET request
-
   }
 
-  function addQuote(quote){
+  function addQuote(userInput){
     
+    $.post('http://localhost:3000/userquote', userInput);
     //YOUR CODE HERE, Add a POST request
 
   }

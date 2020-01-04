@@ -38,7 +38,7 @@ const handleRequest = function(req, res) {
 
   // TODO: GET ONE
   if ((req.url == '/quote/' || req.url == '/quote') && req.method == "GET") {
-    console.log("getting")
+    //console.log("getting")
     //YOUR CODE HERE
     //find a way to respond with data from quotes[randominteger(0, quotes.length)]
     res.writeHead(200, headers)
@@ -46,9 +46,18 @@ const handleRequest = function(req, res) {
 
   }
   // TODO: POST/CREATE
-  else if ((req.url == 'FILL ME IN' || req.url == 'FILL ME IN') && req.method == "POST") {
+  else if ((req.url == '/userquote/' || req.url == '/userquote') && req.method == "POST") {
     //YOUR CODE HERE
-    res.end();
+    res.writeHead(201, headers);
+    let body = [];
+    req.on('data', (chunk) => {
+      body.push(chunk);
+    }).on('end', () => {
+      body = Buffer.concat(body).toString();
+      console.log(body);
+      quotes.push(body);
+      console.log(quotes)
+    });
   }
 
 //CATCH ALL ROUTE
